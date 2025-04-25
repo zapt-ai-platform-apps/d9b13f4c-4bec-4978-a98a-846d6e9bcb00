@@ -10,20 +10,20 @@ export default function Home() {
     {
       id: 1,
       image: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/c7bd5333-787f-461f-ae9b-22acbc0ed4b0/frost_warlord_banner1.png?width=512&height=512",
-      title: "Join Our Next Tournament",
-      description: "Participate in the upcoming Mobile Legends championship!"
+      title: "Gabung Turnamen Berikutnya",
+      description: "Ikuti kejuaraan Mobile Legends yang akan datang!"
     },
     {
       id: 2,
       image: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/c7bd5333-787f-461f-ae9b-22acbc0ed4b0/frost_warlord_banner2.png?width=512&height=512",
-      title: "Weekly Training Schedule",
-      description: "Check out our latest practice schedule for team members"
+      title: "Jadwal Latihan Mingguan",
+      description: "Lihat jadwal latihan terbaru untuk anggota tim"
     },
     {
       id: 3,
       image: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/c7bd5333-787f-461f-ae9b-22acbc0ed4b0/frost_warlord_banner3.png?width=512&height=512",
-      title: "Team Highlights",
-      description: "Watch our best moments from recent tournaments"
+      title: "Highlight Tim",
+      description: "Tonton momen terbaik kami dari turnamen terkini"
     }
   ];
 
@@ -52,7 +52,7 @@ export default function Home() {
                   to="/register"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition cursor-pointer"
                 >
-                  Join Our Team
+                  Bergabung Dengan Tim Kami
                 </Link>
               </div>
             </div>
@@ -64,27 +64,27 @@ export default function Home() {
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-blue-400 mb-4">About Frost Warlord</h2>
+            <h2 className="text-3xl font-bold text-blue-400 mb-4">Tentang Frost Warlord</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Frost Warlord is a professional Mobile Legends esports team committed to excellence in competitive gaming. 
-              Our team comprises skilled players who are passionate about the game and dedicated to reaching the top of the competitive scene.
+              Frost Warlord adalah tim esports Mobile Legends profesional yang berkomitmen untuk menjadi yang terbaik dalam kompetisi gaming. 
+              Tim kami terdiri dari pemain terampil yang memiliki semangat tinggi tentang game dan berdedikasi untuk mencapai puncak dalam arena kompetitif.
             </p>
           </div>
 
           {/* Vision and Mission */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-gray-800 p-8 rounded-lg border border-blue-900">
-              <h3 className="text-2xl font-bold text-blue-400 mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">Visi Kami</h3>
               <p className="text-gray-300">
-                To become a leading force in the Mobile Legends competitive scene, known for our strategic gameplay, 
-                teamwork, and community engagement. We aim to inspire the next generation of esports players.
+                Menjadi kekuatan terdepan dalam arena kompetitif Mobile Legends, dikenal karena gameplay strategis, 
+                kerja sama tim, dan keterlibatan komunitas. Kami bertujuan menginspirasi generasi berikutnya pemain esports.
               </p>
             </div>
             <div className="bg-gray-800 p-8 rounded-lg border border-blue-900">
-              <h3 className="text-2xl font-bold text-blue-400 mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">Misi Kami</h3>
               <p className="text-gray-300">
-                To create a supportive environment where players can develop their skills, 
-                build strong team dynamics, and achieve success in tournaments while fostering a positive community.
+                Menciptakan lingkungan yang mendukung di mana pemain dapat mengembangkan keterampilan mereka, 
+                membangun dinamika tim yang kuat, dan mencapai kesuksesan dalam turnamen sambil membangun komunitas yang positif.
               </p>
             </div>
           </div>
@@ -93,23 +93,23 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg border border-blue-900 text-center">
               <FaGamepad className="text-blue-400 text-5xl mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Professional Training</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Pelatihan Profesional</h3>
               <p className="text-gray-300">
-                Structured training sessions led by experienced coaches to enhance individual skills and team coordination.
+                Sesi pelatihan terstruktur dipimpin oleh pelatih berpengalaman untuk meningkatkan keterampilan individu dan koordinasi tim.
               </p>
             </div>
             <div className="bg-gray-800 p-8 rounded-lg border border-blue-900 text-center">
               <FaTrophy className="text-blue-400 text-5xl mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Tournament Participation</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Partisipasi Turnamen</h3>
               <p className="text-gray-300">
-                Regular participation in local and international tournaments to gain competitive experience.
+                Partisipasi rutin dalam turnamen lokal dan internasional untuk mendapatkan pengalaman kompetitif.
               </p>
             </div>
             <div className="bg-gray-800 p-8 rounded-lg border border-blue-900 text-center">
               <FaUsers className="text-blue-400 text-5xl mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Community Building</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Membangun Komunitas</h3>
               <p className="text-gray-300">
-                A supportive community of players, fans, and enthusiasts who share a passion for Mobile Legends.
+                Komunitas yang mendukung pemain, penggemar, dan enthusiast yang berbagi semangat untuk Mobile Legends.
               </p>
             </div>
           </div>

@@ -11,16 +11,6 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <div className="fixed bottom-4 right-4 z-50">
-        <a 
-          href="https://www.zapt.ai" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs text-blue-300 hover:text-blue-100 transition"
-        >
-          Made on ZAPT
-        </a>
-      </div>
     </div>
   );
 }
