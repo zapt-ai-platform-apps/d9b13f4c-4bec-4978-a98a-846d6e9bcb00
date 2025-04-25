@@ -1,27 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaExclamationTriangle, FaSnowflake } from 'react-icons/fa';
+import { FaArrowLeft, FaExclamationTriangle } from 'react-icons/fa';
 
 export default function NotFound() {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center py-12">
-      <div className="container mx-auto px-4 text-center">
-        <FaSnowflake className="text-6xl text-blue-400 mx-auto mb-2" />
-        <FaExclamationTriangle className="text-4xl text-blue-300 mx-auto mb-6" />
-        <h1 className="text-4xl font-bold text-white mb-4">404</h1>
-        <h2 className="text-2xl font-semibold text-blue-400 mb-6">Page Not Found</h2>
-        <p className="text-gray-300 max-w-md mx-auto mb-8">
-          The page you are looking for might have been removed, had its name changed, 
-          or is temporarily unavailable.
-        </p>
-        <Link 
-          to="/"
-          className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition cursor-pointer"
-        >
-          <FaHome className="mr-2" />
-          Go to Homepage
-        </Link>
+    <div className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
+      <div className="mb-6">
+        <img 
+          src="https://img.mobilelegends.com/group1/M00/00/A4/Cq2IxmABh0SAMC19AAHkTHLRJO4413.png" 
+          alt="Mobile Legends 404" 
+          className="w-48 h-48 object-contain mx-auto"
+        />
       </div>
+      
+      <FaExclamationTriangle className="text-5xl text-yellow-500 mb-4" />
+      <h1 className="text-4xl font-bold mb-2">Page Not Found</h1>
+      <p className="text-xl text-gray-400 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+      
+      <Link to="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg flex items-center transition cursor-pointer">
+        <FaArrowLeft className="mr-2" />
+        Back to Home
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -14,19 +14,35 @@ const schema = z.object({
 });
 
 export default function Login() {
-  const { login } = useAuth();
+  const { login, currentUser, clearAuthError } = useAuth();
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const { 
     register, 
     handleSubmit, 
+    reset,
     formState: { errors } 
   } = useForm({
     resolver: zodResolver(schema),
   });
 
+  // Clear form when unmounting
+  useEffect(() => {
+    clearAuthError();
+    return () => reset();
+  }, [clearAuthError, reset]);
+
+  // If user is already logged in, redirect to dashboard
+  useEffect(() => {
+    if (currentUser) {
+      navigate('/dashboard');
+    }
+  }, [currentUser, navigate]);
+
   const onSubmit = async (data) => {
+    if (isSubmitting) return;
+    
     setIsSubmitting(true);
     try {
       console.log("Attempting login with:", data.email);
@@ -42,6 +58,8 @@ export default function Login() {
         errorMessage = 'Invalid email or password. Please try again.';
       } else if (error.code === 'auth/too-many-requests') {
         errorMessage = 'Too many failed login attempts. Please try again later.';
+      } else if (error.code === 'auth/network-request-failed') {
+        errorMessage = 'Network error. Please check your internet connection.';
       }
       
       toast.error(errorMessage);
@@ -61,6 +79,14 @@ export default function Login() {
             </h2>
           </div>
           
+          <div className="mb-6">
+            <img 
+              src="https://wallpapercave.com/wp/wp9706514.jpg" 
+              alt="Mobile Legends Heroes" 
+              className="w-full h-40 object-cover rounded-lg mb-4"
+            />
+          </div>
+          
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
               <label className="block text-gray-300 mb-2">Email</label>
@@ -69,6 +95,7 @@ export default function Login() {
                 {...register('email')}
                 className="w-full p-3 bg-gray-700 border border-gray-600 rounded text-white box-border"
                 placeholder="Enter your email"
+                disabled={isSubmitting}
               />
               {errors.email && (
                 <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
@@ -82,6 +109,7 @@ export default function Login() {
                 {...register('password')}
                 className="w-full p-3 bg-gray-700 border border-gray-600 rounded text-white box-border"
                 placeholder="Enter your password"
+                disabled={isSubmitting}
               />
               {errors.password && (
                 <p className="text-red-400 text-sm mt-1">{errors.password.message}</p>
@@ -105,7 +133,7 @@ export default function Login() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Processing...
+                  Logging in...
                 </span>
               ) : 'Login'}
             </button>
