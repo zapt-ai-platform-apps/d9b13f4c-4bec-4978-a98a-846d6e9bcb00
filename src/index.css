@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-white;
+}
+
+.carousel .control-dots .dot {
+  @apply bg-blue-400;
+}
+
+.carousel .control-arrow:before {
+  border-color: transparent #60a5fa transparent transparent !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-color: transparent transparent transparent #60a5fa !important;
+}

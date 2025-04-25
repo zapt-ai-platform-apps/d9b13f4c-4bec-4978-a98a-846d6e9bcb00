@@ -1,25 +1,34 @@
 {
-    "name": "reactjs-vite-tailwind-vercel",
-    "version": "1.0.0",
-    "description": "ReactJS app with Vite, Tailwind",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "serve": "vite preview",
-        "start": "vite --host"
-    },
-    "dependencies": {
-        "@sentry/browser": "^8.41.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-react": "^4.3.4",
-        "autoprefixer": "^10.4.20",
-        "postcss": "^8.4.47",
-        "tailwindcss": "^3.4.13",
-        "vite": "^5.4.7",
-        "@sentry/vite-plugin": "^2.23.0"
-    }
+  "name": "frost-warlord-esports",
+  "version": "1.0.0",
+  "description": "Frost Warlord Esports Team Website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite --host"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@sentry/browser": "^8.41.0",
+    "date-fns": "^2.30.0",
+    "firebase": "^10.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.49.2",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.20.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.7",
+    "@sentry/vite-plugin": "^2.23.0"
+  }
 }
